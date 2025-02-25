@@ -14,7 +14,7 @@ export default defineConfig(() => {
     server: {
       host: new URL(publicUrl).hostname,
       port: parseInt(new URL(publicUrl).port),
-    },
+    }
     build: {
       outDir: 'build',
       manifest: true,
