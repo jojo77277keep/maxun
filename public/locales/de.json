@@ -1,4 +1,160 @@
 {
+    "action_description": {
+        "text": {
+            "title": "Text erfassen",
+            "description": "Fahren Sie über die Texte, die Sie extrahieren möchten, und klicken Sie, um sie auszuwählen"
+        },
+        "screenshot": {
+            "title": "Screenshot erfassen",
+            "description": "Erfassen Sie einen Teil- oder Vollbildschirmfoto der aktuellen Seite."
+        },
+        "list": {
+            "title": "Liste erfassen",
+            "description": "Fahren Sie über die Liste, die Sie extrahieren möchten. Nach der Auswahl können Sie über alle Texte in der ausgewählten Liste fahren. Klicken Sie zum Auswählen."
+        },
+        "default": {
+            "title": "Welche Daten möchten Sie extrahieren?",
+            "description": "Ein Roboter ist darauf ausgelegt, eine Aktion nach der anderen auszuführen. Sie können eine der folgenden Optionen wählen."
+        },
+        "list_stages": {
+            "initial": "Wählen Sie die Liste aus, die Sie extrahieren möchten, zusammen mit den darin enthaltenen Texten",
+            "pagination": "Wählen Sie aus, wie der Roboter den Rest der Liste erfassen kann",
+            "limit": "Wählen Sie die Anzahl der zu extrahierenden Elemente",
+            "complete": "Erfassung ist abgeschlossen"
+        }
+    },
+    "apikey": {
+        "title": "API-Schlüssel verwalten",
+        "default_name": "Maxun API-Schlüssel",
+        "table": {
+            "name": "API-Schlüssel Name",
+            "key": "API-Schlüssel",
+            "actions": "Aktionen"
+        },
+        "actions": {
+            "copy": "Kopieren",
+            "show": "Anzeigen",
+            "hide": "Ausblenden",
+            "delete": "Löschen"
+        },
+        "no_key_message": "Sie haben noch keinen API-Schlüssel generiert.",
+        "generate_button": "API-Schlüssel generieren",
+        "notifications": {
+            "fetch_error": "API-Schlüssel konnte nicht abgerufen werden - ${error}",
+            "generate_success": "API-Schlüssel erfolgreich generiert",
+            "generate_error": "API-Schlüssel konnte nicht generiert werden - ${error}",
+            "delete_success": "API-Schlüssel erfolgreich gelöscht",
+            "delete_error": "API-Schlüssel konnte nicht gelöscht werden - ${error}",
+            "copy_success": "API-Schlüssel erfolgreich kopiert"
+        }
+    },
+    "browser_recording": {
+        "modal": {
+            "confirm_discard": "Sind Sie sicher, dass Sie die Aufnahme verwerfen möchten?",
+            "confirm_reset": "Sind Sie sicher, dass Sie zurücksetzen möchten?",
+            "reset_warning": "Dadurch werden alle vorherigen Aufnahmen in der aktuellen Sitzung gelöscht. Die Aufnahmesitzung wird für dieselbe Website neu gestartet."
+        },
+        "notifications": {
+            "terminated": "Aktuelle Aufnahme wurde beendet",
+            "environment_reset": "Browser-Umgebung wurde zurückgesetzt",
+            "reset_successful": "Alle Aufnahmen erfolgreich zurückgesetzt und zum Ausgangszustand zurückgekehrt"
+        }
+    },
+    "browser_window": {
+        "attribute_modal": {
+            "title": "Attribut auswählen",
+            "notifications": {
+                "list_select_success": "Liste erfolgreich ausgewählt. Wählen Sie die zu extrahierenden Textdaten.",
+                "pagination_select_success": "Paginierungselement erfolgreich ausgewählt."
+            }
+        },
+        "attribute_options": {
+            "anchor": {
+                "text": "Text: {{text}}",
+                "url": "URL: {{url}}"
+            },
+            "image": {
+                "alt_text": "Alt-Text: {{altText}}",
+                "image_url": "Bild-URL: {{imageUrl}}"
+            },
+            "default": {
+                "text": "Text: {{text}}"
+            }
+        }
+    },
+    "integration_settings": {
+        "title": "Mit Google Sheet integrieren",
+        "descriptions": {
+            "sync_info": "Wenn Sie diese Option aktivieren, werden bei jeder erfolgreichen Ausführung dieses Roboters die erfassten Daten in Ihrem Google Sheet ergänzt.",
+            "authenticated_as": "Authentifiziert als: {{email}}"
+        },
+        "alerts": {
+            "success": {
+                "title": "Google Sheet erfolgreich integriert.",
+                "content": "Jedes Mal, wenn dieser Roboter eine erfolgreiche Ausführung erstellt, werden die erfassten Daten Ihrem Google Sheet {{sheetName}} hinzugefügt. Sie können die Datenaktualisierungen",
+                "here": "hier",
+                "note": "Hinweis:",
+                "sync_limitation": "Die vor der Integration mit Google Sheets extrahierten Daten werden nicht im Google Sheet synchronisiert. Nur die nach der Integration extrahierten Daten werden synchronisiert."
+            }
+        },
+        "buttons": {
+            "authenticate": "Mit Google authentifizieren",
+            "fetch_sheets": "Google Sheets abrufen",
+            "remove_integration": "Integration entfernen",
+            "submit": "Absenden"
+        },
+        "fields": {
+            "select_sheet": "Google Sheet auswählen",
+            "selected_sheet": "Ausgewähltes Sheet: {{name}} (ID: {{id}})"
+        }
+    },
+    "interpretation_buttons": {
+        "buttons": {
+            "preview": "Vorschau der Ausgabedaten anzeigen",
+            "reset": "Zurücksetzen",
+            "yes": "Ja",
+            "no": "Nein"
+        },
+        "messages": {
+            "extracting": "Daten werden extrahiert...bitte warten Sie 10 Sekunden bis 1 Minute",
+            "restart_required": "Bitte starten Sie die Interpretation nach der Aktualisierung der Aufnahme neu",
+            "run_finished": "Durchlauf beendet",
+            "run_failed": "Start fehlgeschlagen"
+        },
+        "modal": {
+            "use_previous": "Möchten Sie Ihre vorherige Auswahl als Bedingung für diese Aktion verwenden?",
+            "previous_action": "Ihre vorherige Aktion war: ",
+            "element_text": "auf einem Element mit Text "
+        }
+    },
+    "interpretation_log": {
+        "titles": {
+            "output_preview": "Vorschau der Ausgabedaten",
+            "screenshot": "Bildschirmfoto"
+        },
+        "messages": {
+            "additional_rows": "Weitere Datenzeilen werden nach Abschluss der Aufnahme extrahiert.",
+            "successful_training": "Sie haben den Roboter erfolgreich für Aktionen trainiert! Klicken Sie auf die Schaltfläche unten, um eine Vorschau der Daten zu erhalten, die Ihr Roboter extrahieren wird.",
+            "no_selection": "Sie haben noch nichts zur Extraktion ausgewählt. Sobald Sie dies tun, wird der Roboter hier eine Vorschau Ihrer Auswahl anzeigen."
+        },
+        "data_sections": {
+            "binary_received": "---------- Binäre Ausgabedaten empfangen ----------",
+            "serializable_received": "---------- Serialisierbare Ausgabedaten empfangen ----------",
+            "mimetype": "Medientyp: ",
+            "image_below": "Bild wird unten angezeigt:",
+            "separator": "--------------------------------------------------"
+        },
+        "notifications": {
+            "reset_success": "Vorschau erfolgreich zurückgesetzt"
+        }
+    },
+    "language_menu": {
+        "en": "Englisch",
+        "es": "Spanisch",
+        "ja": "Japanisch",
+        "zh": "Chinesisch",
+        "de": "Deutsch"
+    },
     "login": {
         "title": "Willkommen zurück!",
         "email": "Geben Sie Ihre geschäftliche E-Mail-Adresse ein",
@@ -11,7 +167,7 @@
         "validation": {
             "required_fields": "E-Mail und Passwort sind erforderlich",
             "password_length": "Das Passwort muss mindestens 6 Zeichen lang sein"
-            },
+        },
         "error": {
             "user_not_found": "Benutzer existiert nicht",
             "invalid_credentials": "Ungültige E-Mail oder Passwort",
@@ -19,48 +175,22 @@
             "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut"
         }
     },
-    "register": {
-        "title": "Konto registrieren",
-        "email": "Geben Sie Ihre geschäftliche E-Mail-Adresse ein",
-        "password": "Passwort",
-        "button": "Registrieren",
-        "loading": "Lädt",
-        "register_prompt": "Bereits ein Konto?",
-        "login_link": "Einloggen",
-        "welcome_notification": "Willkommen bei Maxun!",
-        "validation": {
-            "email_required": "E-Mail-Adresse ist erforderlich",
-            "password_requirements": "Das Passwort muss mindestens 6 Zeichen lang sein"
-        },
-        "error": {
-            "user_exists": "Ein Benutzer mit dieser E-Mail existiert bereits",
-            "creation_failed": "Konto konnte nicht erstellt werden",
-            "server_error": "Serverfehler aufgetreten",
-            "generic": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut"
-        }
-    },
-    "recordingtable": {
-        "run": "Ausführen",
-        "name": "Name",
-        "schedule": "Zeitplan",
-        "integrate": "Integrieren",
-        "settings": "Einstellungen",
-        "options": "Optionen",
-        "heading": "Meine Roboter",
-        "new": "Roboter erstellen",
-        "modal": {
-            "title": "Geben Sie die URL ein",
-            "login_title": "Ist für diese Website eine Anmeldung erforderlich?",
-            "label": "URL",
-            "button": "Aufnahme starten"
-        },
-        "edit": "Bearbeiten",
-        "delete": "Löschen",
-        "duplicate": "Duplizieren",
+    "main_page": {
         "notifications": {
-            "delete_warning": "Der Roboter hat zugehörige Ausführungen. Löschen Sie zuerst die Ausführungen, um den Roboter zu löschen",
-            "delete_success": "Roboter erfolgreich gelöscht",
-            "auth_success": "Roboter erfolgreich authentifiziert"
+            "interpretation_success": "Interpretation des Roboters {{name}} erfolgreich",
+            "interpretation_failed": "Interpretation des Roboters {{name}} fehlgeschlagen",
+            "run_started": "Roboter wird ausgeführt: {{name}}",
+            "run_start_failed": "Fehler beim Ausführen des Roboters: {{name}}",
+            "schedule_success": "Roboter {{name}} erfolgreich geplant",
+            "schedule_failed": "Planen des Roboters {{name}} fehlgeschlagen",
+            "abort_success": "Interpretation des Roboters {{name}} erfolgreich abgebrochen",
+            "abort_failed": "Abbrechen der Interpretation des Roboters {{name}} fehlgeschlagen"
+        },
+        "menu": {
+            "recordings": "Roboter",
+            "runs": "Ausführungen",
+            "proxy": "Proxy",
+            "apikey": "API-Schlüssel"
         }
     },
     "mainmenu": {
@@ -71,19 +201,30 @@
         "feedback": "Maxun Cloud beitreten",
         "apidocs": "Website zu API"
     },
-    "runstable": {
-        "runs": "Alle Ausführungen",
-        "runStatus": "Status",
-        "runName": "Name",
-        "startedAt": "Gestartet am",
-        "finishedAt": "Beendet am",
-        "delete": "Löschen",
-        "settings": "Einstellungen",
-        "search": "Ausführungen suchen...",
-        "sort_tooltip": "Zum Sortieren klicken",
-        "notifications": {
-            "no_runs": "Keine Ausführungen gefunden. Bitte versuchen Sie es erneut.",
-            "delete_success": "Ausführung erfolgreich gelöscht"
+    "navbar": {
+        "project_name": "Maxun",
+        "upgrade": {
+            "button": "Upgrade",
+            "modal": {
+                "up_to_date": "🎉 Du bist auf dem neuesten Stand!",
+                "new_version_available": "Eine neue Version ist verfügbar: {{version}}. Aktualisieren Sie auf die neueste Version für Fehlerkorrekturen, Verbesserungen und neue Funktionen!",
+                "view_updates": "Alle Updates anzeigen",
+                "view_updates_link": "hier",
+                "tabs": {
+                    "manual_setup": "Manuelles Setup-Upgrade",
+                    "docker_setup": "Docker Compose Setup-Upgrade"
+                }
+            }
+        },
+        "menu_items": {
+            "logout": "Abmelden",
+            "discord": "Discord",
+            "youtube": "YouTube",
+            "twitter": "Twitter (X)",
+            "language": "Sprache"
+        },
+        "recording": {
+            "discard": "Verwerfen"
         }
     },
     "proxy": {
@@ -91,7 +232,7 @@
         "tab_standard": "Standard-Proxy",
         "tab_rotation": "Automatische Proxy-Rotation",
         "server_url": "Proxy-Server-URL",
-        "server_url_helper": "Proxy für alle Roboter. HTTP- und SOCKS-Proxys werden unterstützt. Beispiel http://myproxy.com:3128 oder socks5://myproxy.com:3128. Kurzform myproxy.com:3128 wird als HTTP-Proxy behandelt.",
+        "server_url_helper": "Proxy für alle Roboter. HTTP- und SOCKS-Proxys werden unterstützt. Beispiel https://myproxy.com:3128 oder socks5://myproxy.com:3128. Kurzform myproxy.com:3128 wird als HTTP-Proxy behandelt.",
         "requires_auth": "Authentifizierung erforderlich?",
         "username": "Benutzername",
         "password": "Passwort",
@@ -122,53 +263,53 @@
             "remove_error": "Fehler beim Entfernen der Proxy-Konfiguration. Bitte erneut versuchen."
         }
     },
-    "apikey": {
-        "title": "API-Schlüssel verwalten",
-        "default_name": "Maxun API-Schlüssel",
-        "table": {
-            "name": "API-Schlüssel Name",
-            "key": "API-Schlüssel",
-            "actions": "Aktionen"
-        },
-        "actions": {
-            "copy": "Kopieren",
-            "show": "Anzeigen",
-            "hide": "Ausblenden",
-            "delete": "Löschen"
-        },
-        "no_key_message": "Sie haben noch keinen API-Schlüssel generiert.",
-        "generate_button": "API-Schlüssel generieren",
-        "notifications": {
-            "fetch_error": "API-Schlüssel konnte nicht abgerufen werden - ${error}",
-            "generate_success": "API-Schlüssel erfolgreich generiert",
-            "generate_error": "API-Schlüssel konnte nicht generiert werden - ${error}",
-            "delete_success": "API-Schlüssel erfolgreich gelöscht",
-            "delete_error": "API-Schlüssel konnte nicht gelöscht werden - ${error}",
-            "copy_success": "API-Schlüssel erfolgreich kopiert"
+    "recording_page": {
+        "loader": {
+            "browser_startup": "Browser wird gestartet...Navigation zu {{url}}"
         }
     },
-    "action_description": {
-        "text": {
-            "title": "Text erfassen",
-            "description": "Fahren Sie über die Texte, die Sie extrahieren möchten, und klicken Sie, um sie auszuwählen"
+    "recordingtable": {
+        "run": "Ausführen",
+        "name": "Name",
+        "schedule": "Zeitplan",
+        "integrate": "Integrieren",
+        "settings": "Einstellungen",
+        "options": "Optionen",
+        "heading": "Meine Roboter",
+        "new": "Roboter erstellen",
+        "modal": {
+            "title": "Geben Sie die URL ein",
+            "login_title": "Ist für diese Website eine Anmeldung erforderlich?",
+            "label": "URL",
+            "button": "Aufnahme starten"
         },
-        "screenshot": {
-            "title": "Screenshot erfassen",
-            "description": "Erfassen Sie einen Teil- oder Vollbildschirmfoto der aktuellen Seite."
+        "edit": "Bearbeiten",
+        "delete": "Löschen",
+        "duplicate": "Duplizieren",
+        "notifications": {
+            "delete_warning": "Der Roboter hat zugehörige Ausführungen. Löschen Sie zuerst die Ausführungen, um den Roboter zu löschen",
+            "delete_success": "Roboter erfolgreich gelöscht",
+            "auth_success": "Roboter erfolgreich authentifiziert"
+        }
+    },
+    "register": {
+        "title": "Konto registrieren",
+        "email": "Geben Sie Ihre geschäftliche E-Mail-Adresse ein",
+        "password": "Passwort",
+        "button": "Registrieren",
+        "loading": "Lädt",
+        "register_prompt": "Bereits ein Konto?",
+        "login_link": "Einloggen",
+        "welcome_notification": "Willkommen bei Maxun!",
+        "validation": {
+            "email_required": "E-Mail-Adresse ist erforderlich",
+            "password_requirements": "Das Passwort muss mindestens 6 Zeichen lang sein"
         },
-        "list": {
-            "title": "Liste erfassen",
-            "description": "Fahren Sie über die Liste, die Sie extrahieren möchten. Nach der Auswahl können Sie über alle Texte in der ausgewählten Liste fahren. Klicken Sie zum Auswählen."
-        },
-        "default": {
-            "title": "Welche Daten möchten Sie extrahieren?",
-            "description": "Ein Roboter ist darauf ausgelegt, eine Aktion nach der anderen auszuführen. Sie können eine der folgenden Optionen wählen."
-        },
-        "list_stages": {
-            "initial": "Wählen Sie die Liste aus, die Sie extrahieren möchten, zusammen mit den darin enthaltenen Texten",
-            "pagination": "Wählen Sie aus, wie der Roboter den Rest der Liste erfassen kann",
-            "limit": "Wählen Sie die Anzahl der zu extrahierenden Elemente",
-            "complete": "Erfassung ist abgeschlossen"
+        "error": {
+            "user_exists": "Ein Benutzer mit dieser E-Mail existiert bereits",
+            "creation_failed": "Konto konnte nicht erstellt werden",
+            "server_error": "Serverfehler aufgetreten",
+            "generic": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut"
         }
     },
     "right_panel": {
@@ -229,107 +370,6 @@
             "label_required": "Beschriftung darf nicht leer sein"
         }
     },
-    "save_recording": {
-        "title": "Roboter speichern",
-        "robot_name": "Roboter Name",
-        "buttons": {
-            "save": "Speichern",
-            "confirm": "Bestätigen"
-        },
-        "notifications": {
-            "save_success": "Roboter erfolgreich gespeichert"
-        },
-        "errors": {
-            "user_not_logged": "Benutzer nicht angemeldet. Aufnahme kann nicht gespeichert werden.",
-            "exists_warning": "Ein Roboter mit diesem Namen existiert bereits, bitte bestätigen Sie das Überschreiben des Roboters."
-        },
-        "tooltips": {
-            "saving": "Workflow wird optimiert und gespeichert"
-        }
-    },
-    "browser_recording": {
-        "modal": {
-            "confirm_discard": "Sind Sie sicher, dass Sie die Aufnahme verwerfen möchten?",
-            "confirm_reset": "Sind Sie sicher, dass Sie zurücksetzen möchten?",
-            "reset_warning": "Dadurch werden alle vorherigen Aufnahmen in der aktuellen Sitzung gelöscht. Die Aufnahmesitzung wird für dieselbe Website neu gestartet."
-            },
-        "notifications": {
-            "terminated": "Aktuelle Aufnahme wurde beendet",
-            "environment_reset": "Browser-Umgebung wurde zurückgesetzt",
-            "reset_successful": "Alle Aufnahmen erfolgreich zurückgesetzt und zum Ausgangszustand zurückgekehrt"
-        }
-    },
-    "interpretation_log": {
-        "titles": {
-            "output_preview": "Vorschau der Ausgabedaten",
-            "screenshot": "Bildschirmfoto"
-        },
-        "messages": {
-            "additional_rows": "Weitere Datenzeilen werden nach Abschluss der Aufnahme extrahiert.",
-            "successful_training": "Sie haben den Roboter erfolgreich für Aktionen trainiert! Klicken Sie auf die Schaltfläche unten, um eine Vorschau der Daten zu erhalten, die Ihr Roboter extrahieren wird.",
-            "no_selection": "Sie haben noch nichts zur Extraktion ausgewählt. Sobald Sie dies tun, wird der Roboter hier eine Vorschau Ihrer Auswahl anzeigen."
-        },
-        "data_sections": {
-            "binary_received": "---------- Binäre Ausgabedaten empfangen ----------",
-            "serializable_received": "---------- Serialisierbare Ausgabedaten empfangen ----------",
-            "mimetype": "Medientyp: ",
-            "image_below": "Bild wird unten angezeigt:",
-            "separator": "--------------------------------------------------"
-        },
-        "notifications": {
-            "reset_success": "Vorschau erfolgreich zurückgesetzt"
-        }
-    },
-    "interpretation_buttons": {
-        "buttons": {
-            "preview": "Vorschau der Ausgabedaten anzeigen",
-            "reset": "Zurücksetzen",
-            "yes": "Ja",
-            "no": "Nein"
-        },
-        "messages": {
-            "extracting": "Daten werden extrahiert...bitte warten Sie 10 Sekunden bis 1 Minute",
-            "restart_required": "Bitte starten Sie die Interpretation nach der Aktualisierung der Aufnahme neu",
-            "run_finished": "Durchlauf beendet",
-            "run_failed": "Start fehlgeschlagen"
-        },
-        "modal": {
-            "use_previous": "Möchten Sie Ihre vorherige Auswahl als Bedingung für diese Aktion verwenden?",
-            "previous_action": "Ihre vorherige Aktion war: ",
-            "element_text": "auf einem Element mit Text "
-        }
-    },
-    "recording_page": {
-        "loader": {
-            "browser_startup": "Browser wird gestartet...Navigation zu {{url}}"
-        }
-    },
-    "integration_settings": {
-        "title": "Mit Google Sheet integrieren",
-        "descriptions": {
-            "sync_info": "Wenn Sie diese Option aktivieren, werden bei jeder erfolgreichen Ausführung dieses Roboters die erfassten Daten in Ihrem Google Sheet ergänzt.",
-            "authenticated_as": "Authentifiziert als: {{email}}"
-        },
-        "alerts": {
-            "success": {
-                "title": "Google Sheet erfolgreich integriert.",
-                "content": "Jedes Mal, wenn dieser Roboter eine erfolgreiche Ausführung erstellt, werden die erfassten Daten Ihrem Google Sheet {{sheetName}} hinzugefügt. Sie können die Datenaktualisierungen",
-                "here": "hier",
-                "note": "Hinweis:",
-                "sync_limitation": "Die vor der Integration mit Google Sheets extrahierten Daten werden nicht im Google Sheet synchronisiert. Nur die nach der Integration extrahierten Daten werden synchronisiert."
-            }
-        },
-        "buttons": {
-            "authenticate": "Mit Google authentifizieren",
-            "fetch_sheets": "Google Sheets abrufen",
-            "remove_integration": "Integration entfernen",
-            "submit": "Absenden"
-        },
-        "fields": {
-            "select_sheet": "Google Sheet auswählen",
-            "selected_sheet": "Ausgewähltes Sheet: {{name}} (ID: {{id}})"
-        }
-    },
     "robot_duplication": {
         "title": "Roboter duplizieren",
         "descriptions": {
@@ -352,17 +392,6 @@
             "unknown_error": "Beim Aktualisieren der Ziel-URL ist ein Fehler aufgetreten."
         }
     },
-    "robot_settings": {
-        "title": "Roboter-Einstellungen",
-        "target_url": "Roboter-Ziel-URL",
-        "robot_id": "Roboter-ID",
-        "robot_limit": "Roboter-Limit",
-        "created_by_user": "Erstellt von Benutzer",
-        "created_at": "Erstellungsdatum des Roboters",
-        "errors": {
-            "robot_not_found": "Roboterdetails konnten nicht gefunden werden. Bitte versuchen Sie es erneut."
-        }
-    },
     "robot_edit": {
         "title": "Roboter bearbeiten",
         "change_name": "Roboternamen ändern",
@@ -375,69 +404,36 @@
             "update_error": "Beim Aktualisieren des Roboters ist ein Fehler aufgetreten."
         }
     },
-    "schedule_settings": {
-        "title": "Zeitplan-Einstellungen",
-        "run_every": "Ausführen alle",
-        "start_from": "Beginnen ab",
-        "on_day": "An Tag",
-        "at_around": "Um",
-        "timezone": "Zeitzone",
+    "robot_settings": {
+        "title": "Roboter-Einstellungen",
+        "target_url": "Roboter-Ziel-URL",
+        "robot_id": "Roboter-ID",
+        "robot_limit": "Roboter-Limit",
+        "created_by_user": "Erstellt von Benutzer",
+        "created_at": "Erstellungsdatum des Roboters",
+        "errors": {
+            "robot_not_found": "Roboterdetails konnten nicht gefunden werden. Bitte versuchen Sie es erneut."
+        }
+    },
+    "run_content": {
+        "tabs": {
+            "output_data": "Ausgabedaten",
+            "log": "Protokoll"
+        },
+        "empty_output": "Die Ausgabe ist leer.",
+        "loading": "Ausführung läuft. Extrahierte Daten werden nach Abschluss des Durchlaufs hier angezeigt.",
+        "captured_data": {
+            "title": "Erfasste Daten",
+            "download_json": "Als JSON herunterladen",
+            "download_csv": "Als CSV herunterladen"
+        },
+        "captured_screenshot": {
+            "title": "Erfasster Screenshot",
+            "download": "Screenshot herunterladen",
+            "render_failed": "Das Bild konnte nicht gerendert werden"
+        },
         "buttons": {
-            "delete_schedule": "Zeitplan löschen",
-            "save_schedule": "Zeitplan speichern",
-            "cancel": "Abbrechen"
-        },
-        "labels": {
-            "in_between": "Zwischen",
-            "run_once_every": "Ausführen alle",
-            "start_from_label": "Beginnen ab",
-            "on_day_of_month": "Tag des Monats",
-            "on_day": {
-            "st": ".",
-            "nd": ".",
-            "rd": ".",
-            "th": "."
-            }
-        }
-    },
-    "main_page": {
-        "notifications": {
-            "interpretation_success": "Interpretation des Roboters {{name}} erfolgreich",
-            "interpretation_failed": "Interpretation des Roboters {{name}} fehlgeschlagen",
-            "run_started": "Roboter wird ausgeführt: {{name}}",
-            "run_start_failed": "Fehler beim Ausführen des Roboters: {{name}}",
-            "schedule_success": "Roboter {{name}} erfolgreich geplant",
-            "schedule_failed": "Planen des Roboters {{name}} fehlgeschlagen",
-            "abort_success": "Interpretation des Roboters {{name}} erfolgreich abgebrochen",
-            "abort_failed": "Abbrechen der Interpretation des Roboters {{name}} fehlgeschlagen"
-        },
-        "menu": {
-            "recordings": "Roboter",
-            "runs": "Ausführungen",
-            "proxy": "Proxy",
-            "apikey": "API-Schlüssel"
-        }
-    },
-    "browser_window": {
-        "attribute_modal": {
-            "title": "Attribut auswählen",
-            "notifications": {
-                "list_select_success": "Liste erfolgreich ausgewählt. Wählen Sie die zu extrahierenden Textdaten.",
-                "pagination_select_success": "Paginierungselement erfolgreich ausgewählt."
-            }
-        },
-        "attribute_options": {
-            "anchor": {
-                "text": "Text: {{text}}",
-                "url": "URL: {{url}}"
-            },
-            "image": {
-                "alt_text": "Alt-Text: {{altText}}",
-                "image_url": "Bild-URL: {{imageUrl}}"
-            },
-            "default": {
-                "text": "Text: {{text}}"
-            }
+            "stop": "Stoppen"
         }
     },
     "runs_table": {
@@ -464,58 +460,62 @@
             }
         }
     },
-    "run_content": {
-        "tabs": {
-            "output_data": "Ausgabedaten",
-            "log": "Protokoll"
-        },
-        "empty_output": "Die Ausgabe ist leer.",
-        "loading": "Ausführung läuft. Extrahierte Daten werden nach Abschluss des Durchlaufs hier angezeigt.",
-        "captured_data": {
-            "title": "Erfasste Daten",
-            "download_json": "Als JSON herunterladen",
-            "download_csv": "Als CSV herunterladen"
-        },
-        "captured_screenshot": {
-            "title": "Erfasster Screenshot",
-            "download": "Screenshot herunterladen",
-            "render_failed": "Das Bild konnte nicht gerendert werden"
-        },
+    "runstable": {
+        "runs": "Alle Ausführungen",
+        "runStatus": "Status",
+        "runName": "Name",
+        "startedAt": "Gestartet am",
+        "finishedAt": "Beendet am",
+        "delete": "Löschen",
+        "settings": "Einstellungen",
+        "search": "Ausführungen suchen...",
+        "sort_tooltip": "Zum Sortieren klicken",
+        "notifications": {
+            "no_runs": "Keine Ausführungen gefunden. Bitte versuchen Sie es erneut.",
+            "delete_success": "Ausführung erfolgreich gelöscht"
+        }
+    },
+    "save_recording": {
+        "title": "Roboter speichern",
+        "robot_name": "Roboter Name",
         "buttons": {
-            "stop": "Stoppen"
+            "save": "Speichern",
+            "confirm": "Bestätigen"
+        },
+        "notifications": {
+            "save_success": "Roboter erfolgreich gespeichert"
+        },
+        "errors": {
+            "user_not_logged": "Benutzer nicht angemeldet. Aufnahme kann nicht gespeichert werden.",
+            "exists_warning": "Ein Roboter mit diesem Namen existiert bereits, bitte bestätigen Sie das Überschreiben des Roboters."
+        },
+        "tooltips": {
+            "saving": "Workflow wird optimiert und gespeichert"
         }
     },
-    "navbar": {
-        "project_name": "Maxun",
-        "upgrade": {
-            "button": "Upgrade",
-            "modal": {
-                "up_to_date": "🎉 Du bist auf dem neuesten Stand!",
-                "new_version_available": "Eine neue Version ist verfügbar: {{version}}. Aktualisieren Sie auf die neueste Version für Fehlerkorrekturen, Verbesserungen und neue Funktionen!",
-                "view_updates": "Alle Updates anzeigen",
-                "view_updates_link": "hier",
-                "tabs": {
-                    "manual_setup": "Manuelles Setup-Upgrade",
-                    "docker_setup": "Docker Compose Setup-Upgrade"
-                }
+    "schedule_settings": {
+        "title": "Zeitplan-Einstellungen",
+        "run_every": "Ausführen alle",
+        "start_from": "Beginnen ab",
+        "on_day": "An Tag",
+        "at_around": "Um",
+        "timezone": "Zeitzone",
+        "buttons": {
+            "delete_schedule": "Zeitplan löschen",
+            "save_schedule": "Zeitplan speichern",
+            "cancel": "Abbrechen"
+        },
+        "labels": {
+            "in_between": "Zwischen",
+            "run_once_every": "Ausführen alle",
+            "start_from_label": "Beginnen ab",
+            "on_day_of_month": "Tag des Monats",
+            "on_day": {
+                "st": ".",
+                "nd": ".",
+                "rd": ".",
+                "th": "."
             }
-        },
-        "menu_items": {
-            "logout": "Abmelden",
-            "discord": "Discord",
-            "youtube": "YouTube",
-            "twitter": "Twitter (X)",
-            "language": "Sprache"
-        },
-        "recording": {
-            "discard": "Verwerfen"
         }
-    },
-    "language_menu": {
-        "en": "Englisch",
-        "es": "Spanisch",
-        "ja": "Japanisch",
-        "zh": "Chinesisch",
-        "de": "Deutsch"
     }
 }
